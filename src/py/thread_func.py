@@ -1,12 +1,12 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2020/12/24
+# @Time    : 2020/12/25
 # @Author  : Naunter
 # @Page    : https://github.com/Naunters
+# @Page    : https://github.com/BDO-CnHope/bdocn_client
 
-import threading
+from threading import Thread 
 
-def thread_it(func, args):
-    t = threading.Thread(target=func, args=args)
+def thread_it(func, *args):
+    t = Thread(target=func, args=args)
     t.setDaemon(True)
     t.start()
     #t.join()
